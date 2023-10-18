@@ -7,7 +7,7 @@ app.use(cors()); // Allow all origins for now, you can configure this as needed
 app.use(express.json());
 
 // Your OpenAI API Key
-const apiKey = "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";
+const apiKey = "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";
 
 app.post("/ask", async (req, res) => {
   try {
