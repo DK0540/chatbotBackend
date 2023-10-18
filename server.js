@@ -1,14 +1,16 @@
 const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
+const dotenv = require("dotenv");
+dotenv.config();
 
 const app = express();
 app.use(cors()); // Allow all origins for now, you can configure this as needed
 app.use(express.json());
 
 // Your OpenAI API Key
-const apiKey = "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";
-
+const apiKey = process.env.API_KEY;
+console.log(apiKey);
 app.post("/ask", async (req, res) => {
   try {
     const userInput = req.body.userInput;
